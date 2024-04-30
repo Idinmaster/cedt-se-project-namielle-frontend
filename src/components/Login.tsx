@@ -9,6 +9,7 @@ export default function Login({ error }: { error: string | undefined }) {
     const password = useRef("");
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        // alert(username.current + " " + password.current);
         e.preventDefault();
         await signIn("credentials", {
             email: username.current,
@@ -16,6 +17,7 @@ export default function Login({ error }: { error: string | undefined }) {
             redirect: true,
             callbackUrl: "http://localhost:3000"
         })
+        // alert(username.current + " " + password.current)
     }
 
 
