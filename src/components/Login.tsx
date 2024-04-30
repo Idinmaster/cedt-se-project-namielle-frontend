@@ -15,7 +15,7 @@ export default function Login({ error }: { error: string | undefined }) {
             email: username.current,
             password: password.current,
             redirect: true,
-            callbackUrl: "http://localhost:3000"
+            callbackUrl: process.env.FRONTEND_URL
         })
         // alert(username.current + " " + password.current)
     }

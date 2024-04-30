@@ -32,7 +32,7 @@ export default function OTPTextfield({ firstname, lastname, email, password, tel
                 email: email,
                 password: password,
                 redirect: true,
-                callbackUrl: "http://localhost:3000"
+                callbackUrl: process.env.FRONTEND_URL
             })
 
         } catch (err) {

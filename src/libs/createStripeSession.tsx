@@ -8,7 +8,7 @@ export default async function createStripeSession(
     discountCode: String
 ) {
     const response = await fetch(
-        "http://localhost:5000/api/v1/stripe/create-checkout-session",
+        process.env.BACKEND_URL  + "/api/v1/stripe/create-checkout-session",
         {
             method: "POST",
             mode: "cors",
