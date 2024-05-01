@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRef } from 'react'
 import { signIn } from 'next-auth/react'
+import { Provider } from 'react-redux'
 
 export default function Login({ error }: { error: string | undefined }) {
     const username = useRef("");
@@ -24,8 +25,10 @@ export default function Login({ error }: { error: string | undefined }) {
     return (
         <form className="mt-[6%] mx-[5%] h-auto w-[50%] flex flex-col" onSubmit={onSubmit}>
             <label className="text-purple-dark dark:text-white-grayish font-sans font-black text-8xl mb-10">Signing in...</label>
-            <input required className="h-12 w-[80%] mt-10 mb-8 border border-slate-500 p-2 font-sans dark:bg-midnight-blue text-black dark:text-white-grayish" placeholder="Email" type="text" id="email"
+            <label className="text-purple-dark dark:text-white-grayish font-sans font-black text-xl">Username</label>
+            <input required className="h-12 w-[80%] mt-2 mb-8 border border-slate-500 p-2 font-sans dark:bg-midnight-blue text-black dark:text-white-grayish" placeholder="Email" type="text" id="email"
                 onChange={(e) => { username.current = e.target.value }} />
+            <label className="text-purple-dark dark:text-white-grayish font-sans font-black text-xl">Password</label>
             <input required className="h-12 w-[80%] mb-16 border border-slate-500 p-2 font-sans dark:bg-midnight-blue text-black dark:text-white-grayish" placeholder="Password" type="password" id="password"
                 onChange={(e) => { password.current = e.target.value }} />
 

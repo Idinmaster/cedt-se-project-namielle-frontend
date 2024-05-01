@@ -758,8 +758,14 @@ video {
   margin-top: auto;
   margin-bottom: auto;
 }
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
 }
 .mb-16 {
   margin-bottom: 4rem;
@@ -1039,6 +1045,9 @@ video {
 }
 .w-\[50\%\] {
   width: 50%;
+}
+.w-\[500px\] {
+  width: 500px;
 }
 .w-\[50px\] {
   width: 50px;
@@ -1514,9 +1523,6 @@ video {
 .pt-\[2\%\] {
   padding-top: 2%;
 }
-.text-left {
-  text-align: left;
-}
 .text-center {
   text-align: center;
 }
@@ -1546,6 +1552,10 @@ video {
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .text-lg {
   font-size: 1.125rem;

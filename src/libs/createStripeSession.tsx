@@ -8,7 +8,8 @@ export default async function createStripeSession(
     discountCode: String
 ) {
     const response = await fetch(
-        process.env.BACKEND_URL  + "/api/v1/stripe/create-checkout-session",
+        
+        process.env.BACKEND_URL + "/api/v1/stripe/create-checkout-session",
         {
             method: "POST",
             mode: "cors",
@@ -29,7 +30,7 @@ export default async function createStripeSession(
         throw new Error(error.message);
     }
     const responseJson = await response.json();
-    console.log(responseJson);
-    console.log(uid);
+    // console.log(responseJson);
+    // console.log(uid);
     return responseJson;
 }
